@@ -9,12 +9,13 @@ class Chronometer {
     // ... your code goes here.
 
     this.intervalId = setInterval( () => {
-    /*    if(typeof printTimeCallback === 'function'){
-          this.currentTime++;
-           printTimeCallback();
-        } */
       this.currentTime++;
-     // printTimeCallback();
+      if( printTimeCallback){
+
+        printTimeCallback();
+          
+        } 
+    
     }, 1000);
   
   }
@@ -57,6 +58,15 @@ class Chronometer {
 
   split() {
     // ... your code goes here
+    //getMinutes();
+    console.log(Math.floor(Math.random() * 60));
+    const randomMin = Math.floor(Math.random() * 60).getMinutes;
+    console.log(randomMin);
+    computeTwoDigitNumber(getSeconds( Math.floor(Math.random() * 60)));
+    console(getMinutes(Math.floor(Math.random() * 60)));
     
+    let result = getMinutes().toString + ':' + computeTwoDigitNumber(getSeconds()).toString;
+    console.log(result);
+    return result;
   }
 }
