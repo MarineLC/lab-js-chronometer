@@ -8,7 +8,11 @@ class Chronometer {
   start(printTimeCallback) {
     // ... your code goes here.
 
-      setInterval( () => {
+    this.intervalId = setInterval( () => {
+    /*    if(typeof printTimeCallback === 'function'){
+          this.currentTime++;
+           printTimeCallback();
+        } */
       this.currentTime++;
      // printTimeCallback();
     }, 1000);
@@ -43,13 +47,16 @@ class Chronometer {
 
   stop() {
     // ... your code goes here
+    clearInterval(this.intervalId);
   }
 
   reset() {
     // ... your code goes here
+    this.currentTime = 0;
   }
 
   split() {
     // ... your code goes here
+    
   }
 }
