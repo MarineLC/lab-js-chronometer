@@ -61,6 +61,6 @@ class Chronometer {
     let min = this.computeTwoDigitNumber(this.getMinutes());
     let sec = this.computeTwoDigitNumber(this.getSeconds());
 
-    return min + ':' + sec;;
+    return min + ':' + sec;
   }
 }
