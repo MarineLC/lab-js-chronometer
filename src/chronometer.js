@@ -8,17 +8,13 @@ class Chronometer {
   start(printTimeCallback) {
     // ... your code goes here.
 
-    
-     setInterval( () => {
-      printTimeCallback;
+      setInterval( () => {
       this.currentTime++;
+     // printTimeCallback();
     }, 1000);
   
   }
 
-  /*printTimeCallback(){
-
-  }*/
   
 
   getMinutes() {
@@ -35,6 +31,14 @@ class Chronometer {
 
   computeTwoDigitNumber(value) {
     // ... your code goes here
+    let result = '';
+    if(parseInt(value.toString().length) === 1){
+      return result = '0' + value;
+    } else{
+      return value.toString();
+    }
+    
+  
   }
 
   stop() {
