@@ -58,15 +58,9 @@ class Chronometer {
 
   split() {
     // ... your code goes here
-    //getMinutes();
-    console.log(Math.floor(Math.random() * 60));
-    const randomMin = Math.floor(Math.random() * 60).getMinutes;
-    console.log(randomMin);
-    computeTwoDigitNumber(getSeconds( Math.floor(Math.random() * 60)));
-    console(getMinutes(Math.floor(Math.random() * 60)));
-    
-    let result = getMinutes().toString + ':' + computeTwoDigitNumber(getSeconds()).toString;
-    console.log(result);
-    return result;
+    let min = this.computeTwoDigitNumber(this.getMinutes());
+    let sec = this.computeTwoDigitNumber(this.getSeconds());
+
+    return min + ':' + sec;;
   }
 }
